@@ -75,7 +75,6 @@ resource "google_compute_instance" "web_host" {
   }
 }
 
-
 resource "google_storage_bucket" "flowbucket" {
   name          = "${local.resource_prefix}-flowlogs"
   location      = var.region
