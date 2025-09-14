@@ -3,6 +3,7 @@ provider "google" {
   region  = var.region
 }
 
+
 # VPC
 resource "google_compute_network" "web_vpc" {
   name                    = "${local.resource_prefix}-vpc"
