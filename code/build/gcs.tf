@@ -3,13 +3,14 @@ resource "google_storage_bucket" "sample" {
   location      = "us-central1"
   force_destroy = true
 
+
   uniform_bucket_level_access = false
 
   #public_access_prevention = "enforced" ##comment out this line of code for demo
   labels = {
-    git_commit           = "0f3d7b6729c91fe82c133394738b0ca8a4c5fd65"
+    git_commit           = "4f49a74020d1cfd77838cef01f3de62c5d72202c"
     git_file             = "code__build__gcs_tf"
-    git_last_modified_at = "2025-09-15-21-22-51"
+    git_last_modified_at = "2025-09-15-22-11-21"
     git_last_modified_by = "terryleehillisxsiam"
     git_modifiers        = "terryleehillisxsiam"
     git_org              = "tlh2857-2024"
