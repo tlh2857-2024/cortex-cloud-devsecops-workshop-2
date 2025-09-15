@@ -1,10 +1,21 @@
-resource "google_storage_bucket" "terragoat_website" {
-  name          = "terragot-${var.environment}"
-  location      = var.location
+provider "google" {
+  project = "qwiklabs-gcp-01-b0a28c8299e3"
+  region  = "us-central1"
+}
+
+resource "google_storage_bucket" "example" {
+  name          = "demo-${random_id.rand_suffix.hex}"
+  location      = "us-central1"
   force_destroy = true
 
-resource "google_storage_bucket_iam_binding" "allow_public_read" {
-  bucket  = google_storage_bucket.terragoat_website.id
-  members = ["allUsers"]
-  role    = "roles/storage.objectViewer"
+  uniform_bucket_level_access = false
+  public_access_prevention = "enforced"
+}
+
+resource "random_id" "rand_suffix" {
+  byte_length = 4
+}
+
+output "bucket_name" {
+  value = google_storage_bucket.example.name
 }
