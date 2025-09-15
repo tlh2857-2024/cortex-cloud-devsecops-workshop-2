@@ -1,34 +1,28 @@
-provider "google" {
-  project = "qwiklabs-gcp-01-b0a28c8299e3"
-  region  = "us-central1"
-}
-
-
-
-resource "google_storage_bucket" "example" {
-  name          = "demo-${random_id.rand_suffix.hex}"
+resource "google_storage_bucket" "sample" {
+  name          = "demo2-${random_id.Rand_suffix.hex}"
   location      = "us-central1"
   force_destroy = true
 
   uniform_bucket_level_access = false
-  public_access_prevention    = "enforced"
+
+  #public_access_prevention = "enforced" ##comment out this line of code for demo
   labels = {
-    git_commit           = "1f2caf501aaa1ed96779c2e5aacfd58d4b5687b6"
+    git_commit           = "b8475dc20d4d5e4a60ebfc5289c63222aaf81222"
     git_file             = "code__build__gcs_tf"
-    git_last_modified_at = "2025-09-15-19-20-56"
+    git_last_modified_at = "2025-09-15-21-22-51"
     git_last_modified_by = "terryleehillisxsiam"
     git_modifiers        = "terryleehillisxsiam"
     git_org              = "tlh2857-2024"
     git_repo             = "cortex-cloud-devsecops-workshop-2"
-    yor_name             = "example"
-    yor_trace            = "eb0e54b1-8bd7-4c33-828c-36c73016e48c"
+    yor_name             = "sample"
+    yor_trace            = "5a36ce01-e1ec-46c8-941b-a75a79f5a434"
   }
 }
 
-resource "random_id" "rand_suffix" {
+resource "random_id" "Rand_suffix" {
   byte_length = 4
 }
 
-output "bucket_name" {
-  value = google_storage_bucket.example.name
+output "Bucket_name" {
+  value = google_storage_bucket.sample.name
 }
