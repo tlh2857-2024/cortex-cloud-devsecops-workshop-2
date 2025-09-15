@@ -68,15 +68,15 @@ resource "random_string" "main" {
   special     = false
 }
 resource "google_workbench_instance" "instance" {
-  name = "workbench-instance"
+  name     = "workbench-instance"
   location = local.zone
   gce_setup {
-    machine_type = "n1-standard-2" 
+    machine_type = "n1-standard-2"
 
 
     shielded_instance_config {
-      enable_secure_boot = false
-      enable_vtpm = false
+      enable_secure_boot          = false
+      enable_vtpm                 = false
       enable_integrity_monitoring = false
     }
 
@@ -85,4 +85,15 @@ resource "google_workbench_instance" "instance" {
     tags = ["notebook-instance"]
   }
   depends_on = [module.la_api_batch]
+  labels = {
+    git_commit           = "4d011dc4122c8bae2c5f19b06762561325f29a70"
+    git_file             = "code__vertex_tf"
+    git_last_modified_at = "2025-08-25-22-35-36"
+    git_last_modified_by = "98756224tprenderville"
+    git_modifiers        = "98756224tprenderville"
+    git_org              = "tlh2857-2024"
+    git_repo             = "cortex-cloud-devsecops-workshop-2"
+    yor_name             = "instance"
+    yor_trace            = "fab2e8e2-72aa-43c1-bfea-c7f9b355f23c"
+  }
 }

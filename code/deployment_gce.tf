@@ -71,7 +71,15 @@ resource "google_compute_instance" "web_host" {
   tags = ["web"]
 
   labels = {
-    yor_trace = "1ad6ad58-66da-4f09-b7dc-f00d47f2d87d"
+    yor_trace            = "1ad6ad58-66da-4f09-b7dc-f00d47f2d87d"
+    git_commit           = "d8a5b1189bf0cc4291cfcda3d8447bc1cfdc14d9"
+    git_file             = "code__deployment_gce_tf"
+    git_last_modified_at = "2025-08-25-22-23-31"
+    git_last_modified_by = "98756224tprenderville"
+    git_modifiers        = "98756224tprenderville"
+    git_org              = "tlh2857-2024"
+    git_repo             = "cortex-cloud-devsecops-workshop-2"
+    yor_name             = "web_host"
   }
 }
 
@@ -81,7 +89,15 @@ resource "google_storage_bucket" "flowbucket" {
   location      = var.region
   force_destroy = true
   labels = {
-    yor_trace = "013caf24-be17-407b-b672-07eea153cee2"
+    yor_trace            = "013caf24-be17-407b-b672-07eea153cee2"
+    git_commit           = "d8a5b1189bf0cc4291cfcda3d8447bc1cfdc14d9"
+    git_file             = "code__deployment_gce_tf"
+    git_last_modified_at = "2025-08-25-22-23-31"
+    git_last_modified_by = "98756224tprenderville"
+    git_modifiers        = "98756224tprenderville"
+    git_org              = "tlh2857-2024"
+    git_repo             = "cortex-cloud-devsecops-workshop-2"
+    yor_name             = "flowbucket"
   }
 }
 
