@@ -3,6 +3,7 @@ resource "google_storage_bucket" "sample" {
   location      = "us-central1"
   force_destroy = true
 
+
   uniform_bucket_level_access = false
 
   #public_access_prevention = "enforced" ##comment out this line of code for demo
