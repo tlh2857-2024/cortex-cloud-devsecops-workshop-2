@@ -16,7 +16,7 @@ resource "google_storage_bucket" "sample3" {
     git_modifiers        = "terryleehillisxsiam"
     git_org              = "tlh2857-2024"
     git_repo             = "cortex-cloud-devsecops-workshop-2"
-    yor_name             = "sample2"
+    yor_name             = "sample3"
     yor_trace            = "5a36ce01-e1ec-46c8-941b-a75a79f5a434"
   }
 }

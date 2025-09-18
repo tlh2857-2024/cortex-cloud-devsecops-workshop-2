@@ -7,9 +7,9 @@ resource "google_storage_bucket" "sample2" {
 
   #public_access_prevention = "enforced" ##comment out this line of code for demo
   labels = {
-    git_commit           = "0f3d7b6729c91fe82c133394738b0ca8a4c5fd65"
-    git_file             = "code__build__gcs_tf"
-    git_last_modified_at = "2025-09-15-21-22-51"
+    git_commit           = "9ae8b295bffb4fba8ff5d46367a300a047d67fd8"
+    git_file             = "code__build__gcs2_tf"
+    git_last_modified_at = "2025-09-18-05-52-38"
 
     git_last_modified_by = "terryleehillisxsiam"
     git_modifiers        = "terryleehillisxsiam"
